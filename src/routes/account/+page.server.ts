@@ -4,7 +4,7 @@ import {
 	FIREBASE_MEASUREMENT_ID,
 	FIREBASE_MESSAGING_SENDER_ID,
 } from '$env/static/private';
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad } from './login/$types';
 
 const firebaseConfig = {
 	apiKey: FIREBASE_API_KEY,

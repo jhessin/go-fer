@@ -34,6 +34,7 @@
 
 {#if !$user}
 	<button class="w3-button w3-blue" on:click={() => login()}>Sign In with Google</button>
+	<pre>{JSON.stringify($user, null, 2)}</pre>
 {:else}
 	<p>Welcome {$user.displayName}!</p>
 	<button class="w3-button w3-red" on:click={() => logout()}>Sign Out</button>
