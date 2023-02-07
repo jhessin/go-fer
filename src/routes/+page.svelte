@@ -33,10 +33,10 @@
 </p>
 
 {#if !$user}
-	<button on:click={() => login()}>Sign In</button>
+	<button class="w3-button w3-blue" on:click={() => login()}>Sign In with Google</button>
 {:else}
 	<p>Welcome {$user.displayName}!</p>
-	<button on:click={() => logout()}>Sign Out</button>
+	<button class="w3-button w3-red" on:click={() => logout()}>Sign Out</button>
 {/if}
 
 <p>

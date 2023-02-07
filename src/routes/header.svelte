@@ -2,23 +2,23 @@
 	import { page } from '$app/stores';
 </script>
 
-<nav class="nav nav-tabs nav-fill">
+<nav class="w3-bar">
 	<a
 		href="/"
-		class="nav-link"
-		class:active={$page.url.pathname === '/'}
+		class="w3-bar-item w3-mobile"
+		class:w3-blue={$page.url.pathname === '/'}
 		aria-current={$page.url.pathname === '/' ? 'page' : undefined}>Home</a
 	>
 	<a
 		href="/about"
-		class="nav-link"
-		class:active={$page.url.pathname === '/about'}
+		class="w3-bar-item w3-mobile"
+		class:w3-blue={$page.url.pathname === '/about'}
 		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>About</a
 	>
 	<a
 		href="/account"
-		class="nav-link"
-		class:active={$page.url.pathname === '/account'}
-		aria-current={$page.url.pathname === '/account' ? 'page' : undefined}>Settings</a
+		class="w3-bar-item w3-mobile"
+		class:w3-blue={$page.url.pathname.startsWith('/account')}
+		aria-current={$page.url.pathname.startsWith('/account') ? 'page' : undefined}>Settings</a
 	>
 </nav>
