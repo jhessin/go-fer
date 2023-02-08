@@ -4,7 +4,7 @@ import {
 	FIREBASE_MEASUREMENT_ID,
 	FIREBASE_MESSAGING_SENDER_ID,
 } from '$env/static/private';
-import type { PageServerLoad } from './$types';
+import type { LayoutServerLoad } from './$types';
 
 const firebaseConfig = {
 	apiKey: FIREBASE_API_KEY,
@@ -16,6 +16,6 @@ const firebaseConfig = {
 	measurementId: FIREBASE_MEASUREMENT_ID,
 };
 
-export const load: PageServerLoad = (event) => {
+export const load: LayoutServerLoad = () => {
 	return { firebaseConfig };
 };

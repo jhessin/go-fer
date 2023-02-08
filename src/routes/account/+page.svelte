@@ -6,10 +6,11 @@
 	const auth = getAuth();
 </script>
 
-<p>Welcome to your account page</p>
+<p>Welcome to your account page {$user?.displayName || $user?.email}</p>
 
 <div class="w3-card">
 	<img src={$user?.photoURL} alt="Profile pic" />
+	<label for="email">Email</label>
 	<h3 class="w3-container w3-center">{$user?.email}</h3>
 	<button
 		class="w3-button w3-red w3-center w3-block"

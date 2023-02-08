@@ -1,18 +1,17 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { UserConfig } from "vite";
+import type { UserConfig } from 'vite';
 
 // for information about these interfaces
 declare global {
 	namespace App {
 		// interface Error {}
 		interface Locals {
-			user: UserConfig
+			user: UserConfig;
 		}
 		// interface PageData {}
 		// interface Platform {}
 	}
 }
 
-export { };
-
+export {};
