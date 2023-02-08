@@ -9,18 +9,34 @@
 
 <p>Welcome to your account page {$user?.displayName || $user?.email}</p>
 
-<div class="w3-card">
-	<img src={$user?.photoURL} alt="Profile pic" />
-	<label for="email">Email</label>
-	<h3 class="w3-container w3-center">{$user?.email}</h3>
-	<button
-		class="w3-button w3-red w3-center w3-block"
-		on:click={async () => {
-			await auth.signOut();
-			$user = null;
-			goto('/');
-		}}>Sign Out</button
+<div class="w3-content w3-center">
+	<div
+		class="w3-card-4 w3-padding-large w3-margin-large  w3-center"
+		style="width: 50%; height: 200px"
 	>
+		<img class="w3-circle w3-left w3-image" src={$user?.photoURL} alt="Profile pic" />
+		<div class="w3-content">
+			<table class="w3-table w3-hoverable" style="max-width: 50%">
+				<tr>
+					<td>User Name</td>
+					<td>{$user?.displayName}</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>{$user?.email}</td>
+				</tr>
+			</table>
+			<hr />
+			<button
+				class="w3-button w3-red w3-right w3-margin-right"
+				on:click={async () => {
+					await auth.signOut();
+					$user = null;
+					goto('/');
+				}}>Sign Out</button
+			>
+		</div>
+	</div>
 </div>
 
 {#if dev}
