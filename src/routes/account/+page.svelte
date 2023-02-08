@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { user } from '$lib/store';
 	import { getAuth } from 'firebase/auth';
@@ -22,6 +23,6 @@
 	>
 </div>
 
-<pre>{JSON.stringify($user, null, 2)}</pre>
-
-<!-- <pre>{JSON.stringify($user, null, 2)}</pre> -->
+{#if dev}
+	<pre>{JSON.stringify($user, null, 2)}</pre>
+{/if}
