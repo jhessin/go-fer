@@ -10,10 +10,7 @@
 <p>Welcome to your account page {$user?.displayName || $user?.email}</p>
 
 <div class="w3-content w3-center">
-	<div
-		class="w3-card-4 w3-padding-large w3-margin-large  w3-center"
-		style="width: 50%; height: 200px"
-	>
+	<div class="w3-card-4 w3-padding-large w3-margin-large  w3-center" style="height: 200px">
 		<img class="w3-circle w3-left w3-image" src={$user?.photoURL} alt="Profile pic" />
 		<div class="w3-content">
 			<table class="w3-table w3-hoverable" style="max-width: 50%">
