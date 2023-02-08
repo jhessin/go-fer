@@ -23,7 +23,6 @@
 					<td>{$user?.email}</td>
 				</tr>
 			</table>
-			<hr />
 			<button
 				class="w3-button w3-red w3-right w3-margin-right"
 				on:click={async () => {
